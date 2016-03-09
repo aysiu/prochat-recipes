@@ -14,7 +14,8 @@ By default downloads latest version</string>
         	<key>DOWNLOAD_URL</key>
         	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
         	<key>SEARCH_PATTERN</key>
-		<string>href="(?P&lt;url&gt;.*\.tar.gz.*)"</string>
+		<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
+	<!--	<string>href="(?P&lt;url&gt;.*%MAJOR_OS_VERSION%\.dmg.*)"</string> -->
 	</dict>
 	<key>Process</key>
 	<array>
