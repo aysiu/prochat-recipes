@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads LeJOS EV3 for OS X dmg from sourceforge.
+By default downloads latest version</string>
+	<key>Identifier</key>
+	<string>com.github.prochat.Git.download</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Git</string>
+        	<key>DOWNLOAD_URL</key>
+        	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
+        	<key>SEARCH_PATTERN</key>
+		<string>href="(?P&lt;url&gt;.*\.tar.gz.*)"</string>
+	</dict>
+	<key>Process</key>
+	<array>
+	       <dict>
+			<key>Processor</key>
+           		<string>URLTextSearcher</string>
+           		<key>Arguments</key>
+            		<dict>
+                		<key>url</key>
+                		<string>%DOWNLOAD_URL%</string>
+                		<key>re_pattern</key>
+                		<string>%SEARCH_PATTERN%</string>
+            		</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://sourceforge.net%match%</string>
+				<key>filename</key>
+				<string>%NAME%.tar.gz</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
