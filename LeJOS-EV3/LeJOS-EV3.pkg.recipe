@@ -62,6 +62,7 @@
 	<dict>
 		<key>Processor</key>
 	    <string>FileMover</string>
+		<key>Arguments</key>
 	    <dict>
 			<key>source</key>
 			<string>%pkgroot%/Applications/%NAME%/</string>
