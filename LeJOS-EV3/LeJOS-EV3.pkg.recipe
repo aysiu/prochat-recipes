@@ -71,7 +71,7 @@
 		<dict>
 		    <key>pkgname</key>
 		    <!--string>%NAME%-%version%</string-->
-		    <string>%NAME%</string>
+		    <string>%NAME%-ev3</string>
 		    <key>version</key>
 		    <string>%version%</string>
 		    <key>id</key>
