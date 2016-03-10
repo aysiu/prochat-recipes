@@ -73,7 +73,8 @@
 		    <!--string>%NAME%-%version%</string-->
 		    <string>%NAME%-ev3</string>
 		    <key>version</key>
-		    <string>%version%</string>
+		    <!--string>%version%</string-->
+		    <string>ev3</string>
 		    <key>id</key>
 		    <string>%BUNDLEID%</string>
 		    <key>options</key>
