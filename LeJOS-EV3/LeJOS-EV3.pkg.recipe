@@ -13,8 +13,8 @@
 		<key>BUNDLEID</key>
 		<string>LeJOS</string>
     </dict>
-	<!--key>ParentRecipe</key>
-	<string>com.github.prochat.LeJOS-EV3.download</string-->
+	<key>ParentRecipe</key>
+	<string>com.github.prochat.LeJOS-EV3.download</string>
 	<key>Process</key>
     <array>
 	<dict>
