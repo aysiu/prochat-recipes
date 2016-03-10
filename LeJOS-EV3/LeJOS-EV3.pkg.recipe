@@ -59,16 +59,7 @@
 			<string>%pkgroot%/Applications/%NAME%</string>
 	    </dict>
 	</dict>
-	<dict>
-		<key>Processor</key>
-	    <string>FileMover</string>
-	    <dict>
-			<key>source</key>
-			<string>%pkgroot%/Applications/%NAME%/*</string>
-			<key>target</key>
-			<string>%pkgroot%/Applications/</string>
-		</dict>		
-	</dict>
+
 	</array>
 </dict>
 </plist>
