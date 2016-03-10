@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
 		<key>BUNDLEID</key>
-		<string>LeJOS</string>
+		<string>org.LeJOS.EV3</string>
     </dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.LeJOS-EV3.download</string>
