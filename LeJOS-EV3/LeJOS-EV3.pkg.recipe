@@ -23,11 +23,26 @@
 		<key>archive_path</key>
 		<string>%pathname%</string>
 		<key>destination_path</key>
-		<string>%RECIPE_CACHE_DIR%/src/%NAME%</string>
+		<string>%RECIPE_CACHE_DIR%/app/%NAME%</string>
 		<key>purge_destination</key>
 		<true/>
 	    </dict>
 	</dict>
+	<dict>
+	    <key>Processor</key>
+	    <string>PkgRootCreator</string>
+	    <key>Arguments</key>
+	    <dict>
+		<key>pkgroot</key>
+		<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+		<key>pkgdirs</key>
+		<dict>
+		    <key>Applications</key>
+		    <string>0775</string>
+		</dict>
+	    </dict>
+	</dict>
+
 	</array>
 </dict>
 </plist>
