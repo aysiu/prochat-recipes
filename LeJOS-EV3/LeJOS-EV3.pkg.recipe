@@ -10,9 +10,11 @@
     <dict>
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
+		<key>BUNDLEID</key>
+		<string>LeJOS</string>
     </dict>
-	<key>ParentRecipe</key>
-	<string>com.github.prochat.LeJOS-EV3.download</string>
+	<!--key>ParentRecipe</key>
+	<string>com.github.prochat.LeJOS-EV3.download</string-->
 	<key>Process</key>
     <array>
 	<dict>
@@ -59,17 +61,37 @@
 			<string>%pkgroot%/Applications/%NAME%</string>
 	    </dict>
 	</dict>
+	
 	<dict>
-		<key>Processor</key>
-	    <string>FileMover</string>
-		<key>Arguments</key>
+	    <key>Processor</key>
+	    <string>PkgCreator</string>
+	    <key>Arguments</key>
 	    <dict>
-			<key>source</key>
-			<string>%pkgroot%/Applications/%NAME%/</string>
-			<key>target</key>
-			<string>%pkgroot%/Applications/</string>
-		</dict>		
+		<key>pkg_request</key>
+		<dict>
+		    <key>pkgname</key>
+		    <string>%NAME%-%version%</string>
+		    <key>version</key>
+		    <string>%version%</string>
+		    <key>id</key>
+		    <string>%BUNDLEID%</string>
+		    <key>options</key>
+		    <string>purge_ds_store</string>
+		    <key>chown</key>
+		    <array>
+			<dict>
+			    <key>path</key>
+			    <string>Applications</string>
+			    <key>user</key>
+			    <string>root</string>
+			    <key>group</key>
+			    <string>admin</string>
+			</dict>
+		    </array>
+		</dict>
+	    </dict>
 	</dict>
+	
 	</array>
 </dict>
 </plist>
