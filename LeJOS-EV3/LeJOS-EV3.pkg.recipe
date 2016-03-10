@@ -64,7 +64,7 @@
 	    <string>FileMover</string>
 	    <dict>
 			<key>source</key>
-			<string>%pkgroot%/Applications/%NAME%/*</string>
+			<string>%pkgroot%/Applications/%NAME%/</string>
 			<key>target</key>
 			<string>%pkgroot%/Applications/</string>
 		</dict>		
