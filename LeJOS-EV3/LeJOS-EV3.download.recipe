@@ -16,7 +16,7 @@ By default downloads latest version</string>
         	<key>SEARCH_PATTERN_URL</key>
 			<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
 			<key>SEARCH_PATTERN_VERSION</key>
-			<string>href=".*title="/(?P&lt;version&gt;.*\.tar\.gz.*)"</string>
+			<string>href=".*title="/(?P&lt;version&gt;.*)/.*\.tar\.gz.*"</string>
 	</dict>
 	<key>Process</key>
 	<array>
