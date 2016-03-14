@@ -1,0 +1,4 @@
+#!/bin/sh
+LEJOS_PATH=/Applications/LeJOS-EV3
+ln -s ${LEJOS_PATH}/* ${LEJOS_PATH}/lejos-ev3
+
