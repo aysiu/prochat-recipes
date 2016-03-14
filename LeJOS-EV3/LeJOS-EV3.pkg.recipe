@@ -10,6 +10,8 @@
     <dict>
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
+		<key>BUNDLEID</key>
+		<string>org.lejos.ev3</string>
     </dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.LeJOS-EV3.download</string>
