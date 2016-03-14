@@ -11,12 +11,12 @@ By default downloads latest version</string>
 	<dict>
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
-        	<key>DOWNLOAD_URL</key>
-        	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
-        	<key>SEARCH_PATTERN_URL</key>
-			<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
-			<key>SEARCH_PATTERN_VERSION</key>
-			<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.tar\.gz.*"</string>
+       	<key>DOWNLOAD_URL</key>
+       	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
+       	<key>SEARCH_PATTERN_URL</key>
+		<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
+		<key>SEARCH_PATTERN_VERSION</key>
+		<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.tar\.gz.*"</string>
 	</dict>
 	<key>Process</key>
 	<array>

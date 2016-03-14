@@ -11,10 +11,12 @@ By default downloads latest version</string>
 	<dict>
 		<key>NAME</key>
 		<string>LeJOS-NXJ</string>
-        	<key>DOWNLOAD_URL</key>
-        	<string>https://sourceforge.net/projects/nxt.lejos.p/files/</string>
-        	<key>SEARCH_PATTERN</key>
+       	<key>DOWNLOAD_URL</key>
+       	<string>https://sourceforge.net/projects/nxt.lejos.p/files/</string>
+       	<key>SEARCH_PATTERN</key>
 		<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
+		<key>SEARCH_PATTERN_VERSION</key>
+		<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.tar\.gz.*"</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -40,6 +42,19 @@ By default downloads latest version</string>
 				<string>%NAME%.tar.gz</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+           		<string>URLTextSearcher</string>
+           		<key>Arguments</key>
+            		<dict>
+                		<key>url</key>
+                		<string>%DOWNLOAD_URL%</string>
+						<key>result_output_var_name</key>
+						<string>version</string>
+                		<key>re_pattern</key>
+                		<string>%SEARCH_PATTERN_VERSION%</string>
+            		</dict>
+		</dict>		
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
