@@ -41,11 +41,11 @@
 	    <dict>
 		<key>pkgroot</key>
 		<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-		<!--key>pkgdirs</key>
+		<key>pkgdirs</key>
 		<dict>
 		    <key>Applications</key>
 		    <string>0775</string>
-		</dict-->
+		</dict>
 	    </dict>
 	</dict>
 	<dict>
@@ -58,8 +58,7 @@
 			<key>source_path</key>
 			<string>%destination_path%</string>
 			<key>destination_path</key>
-			<!--string>%pkgroot%/Applications/%NAME%</string-->
-			<string>%pkgroot%/Applications</string>
+			<string>%pkgroot%/Applications/%NAME%</string>
 	    </dict>
 	</dict>
 	
