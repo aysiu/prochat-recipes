@@ -1,0 +1,4 @@
+#!/bin/sh
+LEJOS_PATH=/Applications/LeJOS-NXJ
+ln -s ${LEJOS_PATH}/* ${LEJOS_PATH}/lejos-nxj
+
