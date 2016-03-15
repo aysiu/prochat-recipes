@@ -32,45 +32,20 @@
         </dict>
     </dict>
 	<key>ParentRecipe</key>
-	<string>com.github.prochat.LeJOS-NXJ.download</string>
+	<string>com.github.prochat.LeJOS-NXJ.pkg</string>
    	<key>Process</key>
     <array>	
-		<dict>
-		 	<key>Comment</key>
-		    <string>Unarchive downloaded stuff</string>
-		    <key>Processor</key>
-		    <string>Unarchiver</string>
-		    <key>Arguments</key>
-		    <dict>
-			<key>archive_path</key>
-			<string>%pathname%</string>
-			<key>destination_path</key>
-			<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
-			<key>purge_destination</key>
-			<true/>
-		    </dict>
-		</dict>
-	    <dict>
-	 		<key>Processor</key>
-	     	<string>DmgCreator</string>
-	       	<key>Arguments</key>
-	       	<dict>
-	         	<key>dmg_root</key>
-	         	<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-	          	<key>dmg_path</key>
-	          	<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-	     	</dict>
-		</dict>
 	  	<dict>
+			<key>Processor</key>
+	      	<string>MunkiImporter</string>
 	      	<key>Arguments</key>
 	      	<dict>
 	          	<key>pkg_path</key>
-	          	<string>%dmg_path%</string>
+	          	<string>%NAME%-%version%</string>
 	          	<key>repo_subdirectory</key>
 	          	<string>%MUNKI_REPO_SUBDIR%</string>
 	      	</dict>
-	      	<key>Processor</key>
-	      	<string>MunkiImporter</string>
+	      
 		</dict>
 	</array>
 </dict>
