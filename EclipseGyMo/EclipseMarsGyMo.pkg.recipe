@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Eclipse_Mars GyMo</string>
+        <string>Eclipse_MarsGyMo</string>
     </dict>
     <key>ParentRecipe</key>
     <string>uk.ac.ox.orchard.download.EclipseMars</string>
