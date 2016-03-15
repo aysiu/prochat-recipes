@@ -19,14 +19,15 @@
         <dict>
             <key>catalogs</key>
             <array>
-                <string>testing</string>
+              	<string>testing</string>
             </array>
             <key>description</key>
             <string>LeJOS-EV3 let's you programm EV3 LEGO bricks in Java. The brick must be pre-installed</string>
             <key>display_name</key>
             <string>LeJOS-EV3</string>
             <key>name</key>
-            <string>%NAME%</string>
+            <!--string>%NAME%</string-->
+            <string>LeJOSEV3</string>
             <key>unattended_install</key>
             <true/>
         </dict>
