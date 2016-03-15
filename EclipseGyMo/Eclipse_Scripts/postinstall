@@ -1,2 +1,8 @@
 #!/bin/sh
-echo "Hello World!"
+# Install some standard GyMo plugins
+/Applications/eclipse/eclipse -nosplash \
+	-application org.eclipse.equinox.p2.director \
+	-repository  http://lejos.sourceforge.net/tools/eclipse/plugin/ev3,http://www.lejos.org/tools/eclipse/plugin/nxj,http://download.eclipse.org/releases/mars \
+	-destination /Applications/eclipse \
+	-installIU org.lejos.ev3.ldt.feature.feature.group \
+	-installIU org.lejos.nxt.ldt.feature.feature.group 	
