@@ -9,12 +9,12 @@
 	<string>com.github.prochat.LeJOS-EV3.munki</string>
 	<key>Input</key>
     <dict>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/LeJOS-EV3</string>
         <key>NAME</key>
         <string>LeJOS-EV3</string>
-        <key>BRANCH</key>
-        <string>release</string>
+        <key>MUNKI_CATEGORY</key>
+        <string>Developer Tools</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/LeJOS-EV3</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -26,7 +26,7 @@
             <key>display_name</key>
             <string>LeJOS-EV3</string>
             <key>name</key>
-            <string>%NAME%</string>
+            <string>LeJOSEV3</string>
             <key>unattended_install</key>
             <true/>
         </dict>
