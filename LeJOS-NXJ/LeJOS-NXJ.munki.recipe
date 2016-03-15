@@ -15,21 +15,6 @@
         <string>LeJOS-NXJ</string>
         <key>BRANCH</key>
         <string>release</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
-            <key>description</key>
-            <string>LeJOS-NXJ let's you programm NXT LEGO bricks in Java. The brick must be pre-installed</string>
-            <key>display_name</key>
-            <string>LeJOS-NXJ</string>
-            <key>name</key>
-            <string>LeJOS-NXJ</string>
-            <key>unattended_install</key>
-            <true/>
-        </dict>
     </dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.LeJOS-NXJ.pkg</string>
@@ -41,7 +26,7 @@
 	      	<key>Arguments</key>
 	      	<dict>
 	          	<key>pkg_path</key>
-	          	<string>%NAME%-%version%</string>
+	          	<string>%RECIPE_CACHE_DIR%/%NAME%-%version%</string>
 	          	<key>repo_subdirectory</key>
 	          	<string>%MUNKI_REPO_SUBDIR%</string>
 	      	</dict>
