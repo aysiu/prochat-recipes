@@ -26,7 +26,7 @@
             <key>display_name</key>
             <string>LeJOS-EV3</string>
             <key>name</key>
-            <string>LeJOSEV3</string>
+            <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
         </dict>
@@ -41,7 +41,7 @@
 	      	<key>Arguments</key>
 	      	<dict>
 	          	<key>pkg_path</key>
-	          	<string>%NAME%-%version%</string>
+	          	<string>%NAME%-%version%.pkg</string>
 	          	<key>repo_subdirectory</key>
 	          	<string>%MUNKI_REPO_SUBDIR%</string>
 	      	</dict>
