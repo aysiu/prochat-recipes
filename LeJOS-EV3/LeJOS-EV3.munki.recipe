@@ -26,7 +26,6 @@
             <key>display_name</key>
             <string>LeJOS-EV3</string>
             <key>name</key>
-            <!--string>%NAME%</string-->
             <string>LeJOS-EV3</string>
             <key>unattended_install</key>
             <true/>

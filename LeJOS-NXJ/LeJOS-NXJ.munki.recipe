@@ -26,7 +26,7 @@
             <key>display_name</key>
             <string>LeJOS-NXJ</string>
             <key>name</key>
-            <string>%NAME%</string>
+            <string>LeJOS-NXJ</string>
             <key>unattended_install</key>
             <true/>
         </dict>
