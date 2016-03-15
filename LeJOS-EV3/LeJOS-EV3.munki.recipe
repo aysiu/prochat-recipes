@@ -15,7 +15,7 @@
         <string>Developer Tools</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/LeJOS-EV3</string>
-        <key>pkginfo</key>
+        <!--key>pkginfo</key>
         <dict>
             <key>catalogs</key>
             <array>
@@ -29,7 +29,7 @@
             <string>LeJOS-EV3</string>
             <key>unattended_install</key>
             <true/>
-        </dict>
+        </dict-->
     </dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.LeJOS-EV3.pkg</string>
