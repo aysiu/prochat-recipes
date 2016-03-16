@@ -4,12 +4,10 @@
 	-application org.eclipse.equinox.p2.director \
 	-repository  http://lejos.sourceforge.net/tools/eclipse/plugin/ev3,http://www.lejos.org/tools/eclipse/plugin/nxj \
 	-destination /Applications/eclipse \
-	-installIU org.lejos.ev3.ldt.feature.feature.group
+	-installIU org.lejos.ev3.ldt.feature.feature.group > /dev/null 2>&1
 # Looks like NXT does not support scripted installation at the moment
 #	-installIU org.lejos.nxt.ldt.feature.feature.group
 
-#Force result ok
-exit 0
 
 
 
