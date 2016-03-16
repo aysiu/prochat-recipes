@@ -5,8 +5,11 @@
 	-repository  http://lejos.sourceforge.net/tools/eclipse/plugin/ev3,http://www.lejos.org/tools/eclipse/plugin/nxj \
 	-destination /Applications/eclipse \
 	-installIU org.lejos.ev3.ldt.feature.feature.group
-
 # Looks like NXT does not support scripted installation at the moment
 #	-installIU org.lejos.nxt.ldt.feature.feature.group
+
+#Force result ok
+exit 0
+
 
 
