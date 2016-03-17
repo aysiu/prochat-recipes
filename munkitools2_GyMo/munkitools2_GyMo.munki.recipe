@@ -117,6 +117,21 @@ descending by tag names according to LooseVersion semantics.</string>
                 <string>%RECIPE_CACHE_DIR%/unpack/munkitools_app*</string>
             </dict>
         </dict>
+
+
+		<dict>
+			<key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+           	<dict>
+                <key>archive_path</key>
+                <string>%found_filename%/Payload</string>
+                <key>archive_format</key>
+                <string>tar_gzip</string>
+            </dict>
+		</dict>
+
+
         <dict>
             <key>Processor</key>
             <string>FlatPkgPacker</string>
