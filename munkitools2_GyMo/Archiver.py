@@ -111,7 +111,6 @@ class Archiver(Processor):
                    "-c",
                    "-f",
                    archive_path,
-                   "-C",
                    source_path]
             if fmt.endswith("gzip"):
                 cmd.append("-z")
