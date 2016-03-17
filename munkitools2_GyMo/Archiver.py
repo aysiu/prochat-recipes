@@ -38,13 +38,13 @@ class Archiver(Processor):
     description = __doc__
     input_variables = {
         "archive_path": {
-            "required": False,
+            "required": True,
             "description": "Path to an archive. Defaults to contents of the "
                            "'pathname' variable, for example as is set by "
                            "URLDownloader.",
         },
         "source_path": {
-            "required": False,
+            "required": True,
             "description": ("Directory where archive will be unpacked, created "
                             "if necessary. Defaults to RECIPE_CACHE_DIR/NAME.")
         },
@@ -133,7 +133,7 @@ class Archiver(Processor):
                 "Archiving %s with %s failed: %s"
                 % (archive_path, os.path.basename(cmd[0]), stderr))
 
-        self.output("Unarchived %s to %s" % (archive_path, destination_path))
+        self.output("Archived %s to %s" % (archive_path, source_path))
 
 if __name__ == '__main__':
     PROCESSOR = Archiver()
