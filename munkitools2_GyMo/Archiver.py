@@ -70,12 +70,12 @@ class Archiver(Processor):
 
     def main(self):
         """Unarchive a file"""
-        # handle some defaults for archive_path and destination_path
+        # handle some defaults for archive_path and source_path
         archive_path = self.env.get("archive_path", self.env.get("pathname"))
         if not archive_path:
             raise ProcessorError(
                 "Expected an 'archive_path' input variable but none is set!")
-        destination_path = self.env.get(
+        source_path = self.env.get(
             "source_path",
             os.path.join(self.env["RECIPE_CACHE_DIR"], self.env["NAME"]))
 
