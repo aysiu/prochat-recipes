@@ -134,15 +134,13 @@ descending by tag names according to LooseVersion semantics.</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
-            <string>Copier</string>
+            <string>FileMover</string>
             <key>Arguments</key>
            	<dict>
-                <key>source_path</key>
+                <key>source</key>
                 <string>%RECIPE_DIR%/WebResources/branding.png</string>
-                <key>destination_path</key>
+                <key>target</key>
                 <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding.png</string>
-				<key>overwrite</key>
-                <string>true</string>				
             </dict>
 		</dict>		
 		<dict>
