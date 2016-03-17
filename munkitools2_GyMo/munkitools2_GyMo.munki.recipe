@@ -128,6 +128,8 @@ descending by tag names according to LooseVersion semantics.</string>
                 <string>%found_filename%/Payload</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
+				<key>destination_path</key>
+				<string>%found_filename%</string>
             </dict>
 		</dict>
 
