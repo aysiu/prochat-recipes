@@ -134,16 +134,45 @@ descending by tag names according to LooseVersion semantics.</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
-            <string>FileMover</string>
+            <string>Copier</string>
             <key>Arguments</key>
            	<dict>
-                <key>source</key>
+                <key>source_path</key>
                 <string>%RECIPE_DIR%/WebResources/branding.png</string>
-                <key>target</key>
+                <key>destination_path</key>
                 <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding.png</string>
+				<key>overwrite</key>
+                <string>true</string>				
             </dict>
 		</dict>		
-
+		<dict>
+			<key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+           	<dict>
+                <key>source_path</key>
+                <string>%RECIPE_DIR%/WebResources/branding1.png</string>
+                <key>destination_path</key>
+                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding1.png</string>
+				<key>overwrite</key>
+                <string>true</string>				
+            </dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+           	<dict>
+                <key>source_path</key>
+                <string>%RECIPE_DIR%/WebResources/branding2.png</string>
+                <key>destination_path</key>
+                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding2.png</string>
+				<key>overwrite</key>
+                <string>true</string>				
+            </dict>
+		</dict>
+		
+		
         <dict>
             <key>Processor</key>
             <string>FlatPkgPacker</string>
