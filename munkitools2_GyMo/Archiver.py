@@ -118,7 +118,7 @@ class Archiver(Processor):
                 cmd.append("-z")
             elif fmt.endswith("bzip2"):
                 cmd.append("-j")
-             cmd.append(source_path);
+            cmd.append(source_path);
         # Call command.
         try:
             proc = subprocess.Popen(cmd,
