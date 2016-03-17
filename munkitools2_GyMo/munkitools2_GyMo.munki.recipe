@@ -165,7 +165,7 @@ descending by tag names according to LooseVersion semantics.</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
 				<key>source_path</key>
-				<string>Applications</string>
+				<string>./Applications</string>
 				<key>root_path</key>
 				<string>%found_filename%</string>				
             </dict>
