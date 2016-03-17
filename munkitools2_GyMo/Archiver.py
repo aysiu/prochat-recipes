@@ -45,7 +45,6 @@ class Archiver(Processor):
             "required": False,
             "description": ("Directory/Source File to be packed into archive. "
                             "Defaults to NAME.")
-
         },
       	"root_path": {
             "required": False,
@@ -79,8 +78,8 @@ class Archiver(Processor):
         if not archive_path:
             raise ProcessorError(
                 "Expected an 'archive_path' input variable but none is set!")
-		root_path = self.env.get("root_path",self.env["RECIPE_CACHE_DIR"])
         source_path = self.env.get("source_path",self.env["NAME"])
+		root_path = self.env.get("root_path",self.env["RECIPE_CACHE_DIR"])
         fmt = self.env.get("archive_format")
         if fmt is None:
             fmt = self.get_archive_format(archive_path)
@@ -113,12 +112,14 @@ class Archiver(Processor):
                    "-c",
                    "-f",
                    archive_path,
-                   source_path]
+				   "-C",
+				   root_path]
             if fmt.endswith("gzip"):
                 cmd.append("-z")
             elif fmt.endswith("bzip2"):
                 cmd.append("-j")
-
+			cmd.append(" ");
+			cmd.append(source_path);
         # Call command.
         try:
             proc = subprocess.Popen(cmd,
@@ -131,10 +132,10 @@ class Archiver(Processor):
                 % (os.path.basename(cmd[0]), err.errno, err.strerror))
         if proc.returncode != 0:
             raise ProcessorError(
-                "Archiving %s in %s with %s failed: %s"
-                % (source_path, archive_path, os.path.basename(cmd[0]), stderr))
+                "Archiving: %s failed: %s"
+                % (cmd, stderr))
 
-        self.output("Archived %s to %s" % (archive_path, source_path))
+        self.output("Archived:  %s " % (cmd))
 
 if __name__ == '__main__':
     PROCESSOR = Archiver()

@@ -154,41 +154,8 @@ descending by tag names according to LooseVersion semantics.</string>
 				<string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/</string>
             </dict>
 		</dict>
-		
-		<!--dict>
-			<key>Processor</key>
-            <string>FileMover</string>
-            <key>Arguments</key>
-           	<dict>
-                <key>source</key>
-                <string>%RECIPE_DIR%/WebResources/branding.png</string>
-                <key>target</key>
-                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding.png</string>
-            </dict>
-		</dict>		
+
 		<dict>
-			<key>Processor</key>
-            <string>FileMover</string>
-            <key>Arguments</key>
-           	<dict>
-                <key>source</key>
-                <string>%RECIPE_DIR%/WebResources/branding1.png</string>
-                <key>target</key>
-                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding1.png</string>		
-            </dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-            <string>FileMover</string>
-            <key>Arguments</key>
-           	<dict>
-                <key>source</key>
-                <string>%RECIPE_DIR%/WebResources/branding2.png</string>
-                <key>target</key>
-                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding2.png</string>			
-            </dict>
-		</dict-->
-		<!--dict>
 			<key>Processor</key>
             <string>Archiver</string>
             <key>Arguments</key>
@@ -198,9 +165,11 @@ descending by tag names according to LooseVersion semantics.</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
 				<key>source_path</key>
-				<string>%found_filename%/Applications</string>
+				<string>Applications</string>
+				<key>root_path</key>
+				<string>%found_filename%</string>				
             </dict>
-		</dict-->
+		</dict>
 		
         <dict>
             <key>Processor</key>
