@@ -78,7 +78,7 @@ class Archiver(Processor):
         if not archive_path:
             raise ProcessorError(
                 "Expected an 'archive_path' input variable but none is set!")
-        source_path = self.env.get("source_path",self.env["NAME"])
+        source_path = self.env.get("source_path",self.env["NAME"]);
 		root_path = self.env.get("root_path",self.env["RECIPE_CACHE_DIR"])
         fmt = self.env.get("archive_format")
         if fmt is None:
