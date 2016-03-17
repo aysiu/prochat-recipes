@@ -1,13 +1,10 @@
 #!/bin/sh
 # Install some standard GyMo plugins
-/Applications/eclipse/eclipse -nosplash \
-	-application org.eclipse.equinox.p2.director \
-	-repository  http://lejos.sourceforge.net/tools/eclipse/plugin/ev3,http://www.lejos.org/tools/eclipse/plugin/nxj \
-	-destination /Applications/eclipse \
-	-installIU org.lejos.ev3.ldt.feature.feature.group > /dev/null 2>&1
-# Looks like NXT does not support scripted installation at the moment
-#	-installIU org.lejos.nxt.ldt.feature.feature.group
-
+/Applications/Eclipse.app/Contents/MacOS/eclipse -nosplash \
+-application org.eclipse.equinox.p2.director \
+-repository  http://lejos.sourceforge.net/tools/eclipse/plugin/ev3,http://www.lejos.org/tools/eclipse/plugin/nxj,http://download.eclipse.org/releases/mars \
+-destination /Applications/Eclipse.app/Contents/Eclipse \
+-installIUs org.lejos.ev3.ldt.feature.feature.group,org.lejos.nxt.ldt.feature.feature.group,org.eclipse.ant.core
 
 
 
