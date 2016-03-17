@@ -143,6 +143,20 @@ descending by tag names according to LooseVersion semantics.</string>
         </dict>
 		<dict>
 			<key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+           	<dict>
+                <key>archive_path</key>
+                <string>>%RECIPE_DIR%/WebResources.tgz</string>
+                <key>archive_format</key>
+                <string>tar_gzip</string>
+				<key>destination_path</key>
+				<string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/</string>
+            </dict>
+		</dict>
+		
+		<!--dict>
+			<key>Processor</key>
             <string>FileMover</string>
             <key>Arguments</key>
            	<dict>
@@ -173,8 +187,8 @@ descending by tag names according to LooseVersion semantics.</string>
                 <key>target</key>
                 <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding2.png</string>			
             </dict>
-		</dict>
-		<dict>
+		</dict-->
+		<!--dict>
 			<key>Processor</key>
             <string>Archiver</string>
             <key>Arguments</key>
@@ -186,7 +200,8 @@ descending by tag names according to LooseVersion semantics.</string>
 				<key>source_path</key>
 				<string>%found_filename%/Applications</string>
             </dict>
-		</dict>
+		</dict-->
+		
         <dict>
             <key>Processor</key>
             <string>FlatPkgPacker</string>

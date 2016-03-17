@@ -39,14 +39,18 @@ class Archiver(Processor):
     input_variables = {
         "archive_path": {
             "required": True,
-            "description": "Path to an archive. Defaults to contents of the "
-                           "'pathname' variable, for example as is set by "
-                           "URLDownloader.",
+            "description": "Path to an archive.",
         },
         "source_path": {
-            "required": True,
-            "description": ("Directory where archive will be unpacked, created "
-                            "if necessary. Defaults to RECIPE_CACHE_DIR/NAME.")
+            "required": False,
+            "description": ("Directory/Source File to be packed into archive. "
+                            "Defaults to NAME.")
+
+        },
+      	"root_path": {
+            "required": False,
+            "description": ("Directory from where archive will be packed, created. "
+                            "Defaults to RECIPE_CACHE_DIR.")
         },
         "archive_format": {
             "required": False,
@@ -71,14 +75,12 @@ class Archiver(Processor):
     def main(self):
         """Unarchive a file"""
         # handle some defaults for archive_path and source_path
-        archive_path = self.env.get("archive_path", self.env.get("pathname"))
+        archive_path = self.env.get("archive_path")
         if not archive_path:
             raise ProcessorError(
                 "Expected an 'archive_path' input variable but none is set!")
-        source_path = self.env.get(
-            "source_path",
-            os.path.join(self.env["RECIPE_CACHE_DIR"], self.env["NAME"]))
-
+		root_path = self.env.get("root_path",self.env["RECIPE_CACHE_DIR"])
+        source_path = self.env.get("source_path",self.env["NAME"])
         fmt = self.env.get("archive_format")
         if fmt is None:
             fmt = self.get_archive_format(archive_path)
