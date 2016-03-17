@@ -117,8 +117,6 @@ descending by tag names according to LooseVersion semantics.</string>
                 <string>%RECIPE_CACHE_DIR%/unpack/munkitools_app*</string>
             </dict>
         </dict>
-
-
 		<dict>
 			<key>Processor</key>
             <string>Unarchiver</string>
@@ -132,6 +130,17 @@ descending by tag names according to LooseVersion semantics.</string>
 				<string>%found_filename%</string>
             </dict>
 		</dict>
+       	<dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>path_list</key>
+				<array>
+                	<string>%found_filename%/Payload</string>
+				</array>
+            </dict>
+        </dict>
 		<dict>
 			<key>Processor</key>
             <string>FileMover</string>
@@ -145,32 +154,26 @@ descending by tag names according to LooseVersion semantics.</string>
 		</dict>		
 		<dict>
 			<key>Processor</key>
-            <string>Copier</string>
+            <string>FileMover</string>
             <key>Arguments</key>
            	<dict>
-                <key>source_path</key>
+                <key>source</key>
                 <string>%RECIPE_DIR%/WebResources/branding1.png</string>
-                <key>destination_path</key>
-                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding1.png</string>
-				<key>overwrite</key>
-                <string>true</string>				
+                <key>target</key>
+                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding1.png</string>		
             </dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
-            <string>Copier</string>
+            <string>FileMover</string>
             <key>Arguments</key>
            	<dict>
-                <key>source_path</key>
+                <key>source</key>
                 <string>%RECIPE_DIR%/WebResources/branding2.png</string>
-                <key>destination_path</key>
-                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding2.png</string>
-				<key>overwrite</key>
-                <string>true</string>				
+                <key>target</key>
+                <string>%found_filename%/Applications/Managed Software Center.app/Contents/Resources/WebResources/branding2.png</string>			
             </dict>
 		</dict>
-		
-		
         <dict>
             <key>Processor</key>
             <string>FlatPkgPacker</string>
