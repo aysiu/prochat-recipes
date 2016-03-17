@@ -140,7 +140,7 @@ descending by tag names according to LooseVersion semantics.</string>
                 	<string>%found_filename%/Payload</string>
 				</array>
             </dict>
-        </dict>
+        </dict-->
 		<dict>
 			<key>Processor</key>
             <string>Unarchiver</string>
@@ -155,7 +155,7 @@ descending by tag names according to LooseVersion semantics.</string>
             </dict>
 		</dict>
 
-		<dict>
+		<--dict>
 			<key>Processor</key>
             <string>Archiver</string>
             <key>Arguments</key>
