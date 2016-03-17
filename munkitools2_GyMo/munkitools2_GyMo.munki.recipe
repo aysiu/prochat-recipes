@@ -147,7 +147,7 @@ descending by tag names according to LooseVersion semantics.</string>
             <key>Arguments</key>
            	<dict>
                 <key>archive_path</key>
-                <string>>%RECIPE_DIR%/WebResources.tgz</string>
+                <string>%RECIPE_DIR%/WebResources.tgz</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
 				<key>destination_path</key>
