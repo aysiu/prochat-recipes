@@ -130,8 +130,8 @@ class Archiver(Processor):
                 % (os.path.basename(cmd[0]), err.errno, err.strerror))
         if proc.returncode != 0:
             raise ProcessorError(
-                "Archiving %s with %s failed: %s"
-                % (archive_path, os.path.basename(cmd[0]), stderr))
+                "Archiving %s in %s with %s failed: %s"
+                % (source_path, archive_path, os.path.basename(cmd[0]), stderr))
 
         self.output("Archived %s to %s" % (archive_path, source_path))
 
