@@ -1,8 +1,0 @@
-#!/bin/sh
-# Configure repository
-sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://munki.cepm.ch/munki_repo"
-sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "gymostd"
-
-
-
-
