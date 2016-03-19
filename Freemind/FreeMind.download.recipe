@@ -4,7 +4,7 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads FreeMind dmg from sourceforge.
-By default downloads latest version</string>
+By  default downloads latest version</string>
 	<key>Identifier</key>
 	<string>com.github.prochat.FreeMind.download</string>
 	<key>Input</key>
