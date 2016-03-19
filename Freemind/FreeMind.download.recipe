@@ -14,7 +14,7 @@ By  default downloads latest version</string>
        	<key>DOWNLOAD_URL</key>
        	<string>http://sourceforge.net/projects/freemind/files/</string>
        	<key>SEARCH_PATTERN_URL</key>
-		<string>href="(?P&lt;url&gt;.*/freemind/.*)"</string>
+		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -37,7 +37,7 @@ By  default downloads latest version</string>
 				<key>url</key>
 				<string>http://sourceforge.net%match%</string>
 				<key>filename</key>
-				<string>%NAME%.tar.gz</string>
+				<string>%NAME%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
