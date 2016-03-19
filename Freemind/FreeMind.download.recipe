@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads LeJOS EV3 for OS X dmg from sourceforge.
+	<string>Downloads FreeMind dmg from sourceforge.
 By default downloads latest version</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.LeJOS-EV3.download</string>
+	<string>com.github.prochat.FreeMind.download</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
