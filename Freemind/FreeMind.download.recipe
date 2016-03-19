@@ -14,7 +14,7 @@ By default downloads latest version</string>
        	<key>DOWNLOAD_URL</key>
        	<string>http://sourceforge.net/projects/freemind/files/</string>
        	<key>SEARCH_PATTERN_URL</key>
-		<string>href="(?P&lt;url&gt;.*\freemind.*)"</string>
+		<string>href="(?P&lt;url&gt;.*freemind.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
 		<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.dmg.*"</string>
 	</dict>
