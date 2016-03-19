@@ -12,7 +12,7 @@ By default downloads latest version</string>
 		<key>NAME</key>
 		<string>FreeMind</string>
        	<key>DOWNLOAD_URL</key>
-       	<string>https://sourceforge.net/projects/freemind/files/</string>
+       	<string>http://sourceforge.net/projects/freemind/files/</string>
        	<key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
