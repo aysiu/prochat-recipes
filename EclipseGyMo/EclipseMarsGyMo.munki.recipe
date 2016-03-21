@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Eclipse Mars with GyMo settings and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.prochat.EclipseMarsGyMo.munki</string>
+    <string>com.github.prochat.munki.EclipseMarsGyMo</string>
     <key>Input</key>
     <dict>
         <key>DISPLAY_NAME</key>
@@ -35,7 +35,7 @@
         </dict>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.prochat.EclipseMarsGyMo.pkg</string>
+    <string>com.github.prochat.pkg.EclipseMarsGyMo</string>
     <key>Process</key>
     <array>
         <dict>

@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Eclipse Mars and makes a pkg of it.</string>
     <key>Identifier</key>
-    <string>com.github.prochat.EclipseMarsGyMo.pkg</string>
+    <string>com.github.prochat.pkg.EclipseMarsGyMo</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
