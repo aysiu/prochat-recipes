@@ -6,7 +6,7 @@
     <string>Downloads the latest LeJOS-NXJ and imports into Munki.
 	</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.LeJOS-NXJ.munki</string>
+	<string>com.github.prochat.munki.LeJOS-NXJ</string>
 	<key>Input</key>
     <dict>
 	    <key>NAME</key>
@@ -17,7 +17,7 @@
         <string>apps/LeJOS-NXJ</string>
     </dict>
 	<key>ParentRecipe</key>
-	<string>com.github.prochat.LeJOS-NXJ.pkg</string>
+	<string>com.github.prochat.pkg.LeJOS-NXJ</string>
    	<key>Process</key>
     <array>	
 	  	<dict>

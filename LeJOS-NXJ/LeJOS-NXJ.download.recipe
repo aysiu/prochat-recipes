@@ -6,7 +6,7 @@
 	<string>Downloads LeJOS NXJ for OS X from sourceforge.
 By default downloads latest version</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.LeJOS-NXJ.download</string>
+	<string>com.github.prochat.download.LeJOS-NXJ</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Packages the download of LeJOS-NXJ.</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.LeJOS-NXJ.pkg</string>
+	<string>com.github.prochat.pkg.LeJOS-NXJ</string>
 	<key>Input</key>
     <dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 		<string>org.lejos.nxj</string>
     </dict>
 	<key>ParentRecipe</key>
-	<string>com.github.prochat.LeJOS-NXJ.download</string>
+	<string>com.github.prochat.download.LeJOS-NXJ</string>
 	<key>Process</key>
     <array>
 	<dict>
