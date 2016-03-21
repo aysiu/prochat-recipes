@@ -14,7 +14,7 @@ By  default downloads latest version</string>
        	<key>INDEX_URL</key>
        	<string>http://sourceforge.net/projects/freemind/files/</string>
 		<key>DOWNLOAD_URL</key>
-       	<string>http://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/f/fr/</string>
+       	<string>http://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/f/fr/freemind</string>
        	<key>SEARCH_PATTERN_URL</key>
 		<string>title="(?P&lt;url&gt;.*\.dmg):.*"</string>	
         <key>USER_AGENT</key>
