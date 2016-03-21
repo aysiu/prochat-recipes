@@ -55,7 +55,7 @@
          	<key>Arguments</key>
          	<dict>
              	<key>pkgname</key>
-             	<string>%NAME%-%version%</string>
+             	<string>%NAME%</string>
              	<key>pkg_request</key>
              	<dict>
                  	<key>pkgdir</key>
