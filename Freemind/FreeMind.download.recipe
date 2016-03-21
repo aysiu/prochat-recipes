@@ -6,7 +6,7 @@
 	<string>Downloads FreeMind dmg from sourceforge.
 By  default downloads latest version</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.download.FreeMind</string>
+	<string>com.github.prochat.download.freemind</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
