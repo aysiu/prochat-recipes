@@ -56,12 +56,14 @@
          	<dict>
              	<key>pkgname</key>
              	<string>%NAME%</string>
+                <key>version</key>
+               	<string>%version%</string>
              	<key>pkg_request</key>
              	<dict>
                  	<key>pkgdir</key>
                  	<string>%RECIPE_CACHE_DIR%</string>
                  	<key>id</key>
-                 	<string>org.freemind.pkg</string>
+                 	<string>%bundleid%</string>
                  	<key>options</key>
                  	<string>purge_ds_store</string>
                  	<key>chown</key>
