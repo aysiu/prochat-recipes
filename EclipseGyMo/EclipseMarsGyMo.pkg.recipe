@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Eclipse Mars and makes a pkg of it.</string>
+    <string>Downloads the latest version of Eclipse Mars and makes a pkg of it.
+	Relies on uk.ac.ox.orchard.download.EclipseMars and add Scripts to install LeJOS plugins</string>
     <key>Identifier</key>
     <string>com.github.prochat.pkg.EclipseMarsGyMo</string>
     <key>Input</key>
