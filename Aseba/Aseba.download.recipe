@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Aseba Studio is the programming environment for Thymio</string>
+	<key>Identifier</key>
+	<string>com.github.prochat.download.Aseba</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Aseba</string>
+	   	<key>DOWNLOAD_URL</key>
+	   	<string>https://www.thymio.org/fr:macinstall</string>
+	    <key>SEARCH_PATTERN_URL</key>
+		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
+		<key>SEARCH_PATTERN_VERSION</key>
+		<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.dmg.*"</string>
+	</dict>
+	<key>Process</key>	
+	<array>	
+	 	<dict>
+			<key>Processor</key>
+           		<string>URLTextSearcher</string>
+           		<key>Arguments</key>
+            		<dict>
+                		<key>url</key>
+                		<string>%DOWNLOAD_URL%</string>
+                		<key>re_pattern</key>
+                		<string>%SEARCH_PATTERN_URL%</string>
+            		</dict>
+		</dict>	
+	</array>
+</dict>
+</plist>	
