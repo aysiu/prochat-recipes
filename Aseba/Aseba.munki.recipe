@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download Aseba disk image and build a munki package.</string>
     <key>Identifier</key>
-    <string>com.github.prochat.aseba.freemind</string>
+    <string>com.github.prochat.munki.aseba</string>
     <key>Input</key>
     <dict>
         <key>DISPLAY_NAME</key>
