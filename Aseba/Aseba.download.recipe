@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Aseba Studio is the programming environment for Thymio</string>
 	<key>Identifier</key>
-	<string>com.github.prochat.download.Aseba</string>
+	<string>com.github.prochat.download.aseba</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
