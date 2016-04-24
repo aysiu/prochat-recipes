@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Download Aseba disk image and build a munki package.</string>
+    <key>Identifier</key>
+    <string>com.github.prochat.aseba.freemind</string>
+    <key>Input</key>
+    <dict>
+        <key>DISPLAY_NAME</key>
+        <string>Aseba/string>
+        <key>NAME</key>
+        <string>Aseba</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Aseba Studio</string>
+            <key>display_name</key>
+            <string>%DISPLAY_NAME%</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>developer</key>
+            <string>EPFL</string>
+            <key>category</key>
+            <string>Programming</string>
+        </dict>
+    </dict>
+    <key>ParentRecipe</key>
+    <string>com.github.prochat.download.aseba</string>
+    <key>Process</key>
+    <array>
+    <dict>
+         <key>Arguments</key>
+         <dict>
+             <key>pkg_path</key>
+             <string>%pathname%</string>
+             <key>repo_subdirectory</key>
+             <string>%MUNKI_REPO_SUBDIR%</string>
+         </dict>
+         <key>Processor</key>
+         <string>MunkiImporter</string>
+     </dict>
+	</array>
+</dict>
+</plist>
+
