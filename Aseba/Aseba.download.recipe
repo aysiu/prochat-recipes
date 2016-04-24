@@ -15,7 +15,7 @@
 	    <key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
-		<string>Version.*(?P&lt;url2&gt;[\.0-9]*).*"</string>
+		<string>Version.*(?P&lt;url2&gt;[\.0-9]*).*</string>
 	</dict>
 	<key>Process</key>	
 	<array>	
