@@ -10,6 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>Aseba</string>
+        <key>BUNDLEID</key>
+        <string>Aseba Studio</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.prochat.download.aseba</string>
@@ -44,6 +46,37 @@
 			<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Aseba</string>
 	    </dict>
  	</dict>
+
+    <dict>
+        <key>Processor</key>
+        <string>PkgCreator</string>
+        <key>Arguments</key>
+        <dict>
+            <key>pkg_request</key>
+            <dict>
+                <key>pkgname</key>
+                <string>%NAME%-%version%</string>
+                <key>version</key>
+                <string>%version%</string>
+                <key>id</key>
+                <string>%BUNDLEID%</string>
+                <key>options</key>
+                <string>purge_ds_store</string>
+                <key>chown</key>
+                <array>
+                    <dict>
+                        <key>path</key>
+                        <string>Applications</string>
+                        <key>user</key>
+                        <string>root</string>
+                        <key>group</key>
+                        <string>admin</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+    </dict>
+
 	</array>
 </dict>
 </plist>
