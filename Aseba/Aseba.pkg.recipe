@@ -43,11 +43,8 @@
 			<key>pkg_path</key>
 			<string>%RECIPE_CACHE_DIR%/%NAME%/Application</string>
 			<string>
-	        </dict>
 	    </dict>
  	</dict>
-
-
 	</array>
 </dict>
 </plist>
