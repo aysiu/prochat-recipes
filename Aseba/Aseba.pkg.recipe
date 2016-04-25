@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Aseba</string>
         <key>BUNDLEID</key>
-        <string>AsebaStudio</string>
+        <string>org.thymio.aseba</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.prochat.download.aseba</string>
