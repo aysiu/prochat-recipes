@@ -44,9 +44,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/FreeMind.app</string>
+                <string>%pathname%/Stellarium.app</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/FreeMind.app</string>
+                <string>%pkgroot%/Applications/Stellarium.app</string>
             </dict>
         </dict>
 		<dict>
