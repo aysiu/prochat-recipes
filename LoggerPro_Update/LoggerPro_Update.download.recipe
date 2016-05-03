@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Logger Pro is a data-collection software</string>
+	<key>Identifier</key>
+	<string>com.github.prochat.download.loggerpro_update</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>LoggerPro_Update</string>
+	   	<key>DOWNLOAD_URL</key>
+	   	<string>http://www.vernier.com/support/updates/logger-pro/</string>
+	    <key>SEARCH_PATTERN_URL</key>
+		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
+		<key>SEARCH_PATTERN_VERSION</key>
+		<string>http://www2.vernier.com/updates/LoggerPro(?P&lt;url2&gt;[\_0-9]*).*</string>
+	</dict>
+	<key>Process</key>	
+	<array>	
+	 	<dict>
+			<key>Processor</key>
+           		<string>URLTextSearcher</string>
+           		<key>Arguments</key>
+            		<dict>
+                		<key>url</key>
+                		<string>%DOWNLOAD_URL%</string>
+                		<key>re_pattern</key>
+                		<string>%SEARCH_PATTERN_URL%</string>
+            		</dict>
+		</dict>	
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%match%</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+           		<string>URLTextSearcher</string>
+           		<key>Arguments</key>
+            		<dict>
+                		<key>url</key>
+                		<string>%DOWNLOAD_URL%</string>
+						<key>result_output_var_name</key>
+						<string>version</string>
+                		<key>re_pattern</key>
+                		<string>%SEARCH_PATTERN_VERSION%</string>
+            		</dict>
+		</dict>		
+	</array>
+</dict>
+</plist>	
