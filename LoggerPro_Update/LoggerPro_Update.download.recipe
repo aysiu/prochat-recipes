@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Logger Pro is a data-collection software</string>
+	<string>Logger Pro is a data-collection software
+	The installation of an update needs a previous licensed version</string>
 	<key>Identifier</key>
 	<string>com.github.prochat.download.loggerpro_update</string>
 	<key>Input</key>
