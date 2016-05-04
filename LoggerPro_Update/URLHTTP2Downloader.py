@@ -166,6 +166,11 @@ class URLHTTP2Downloader(Processor):
         # construct curl command.
         if self.env["HTTP2"]:
 			curl_cmd = [self.env['CURL_PATH'],
+	                    '--silent', '--show-error', '--no-buffer',
+	                    '--dump-header', '-',
+						'--http2',
+	                    '--speed-time', '30',
+	                    '--location',
 	                    '--url', self.env["url"],
 	                    '--output', pathname_temporary]
         else:
@@ -325,6 +330,7 @@ class URLHTTP2Downloader(Processor):
             self.output("Storing new ETag header: %s"
                         % header.get("etag"))
 
+        self.output("Download with %s" % curl_cmd)
         self.output("Downloaded %s" % pathname)
         self.env['url_downloader_summary_result'] = {
             'summary_text': 'The following new items were downloaded:',
