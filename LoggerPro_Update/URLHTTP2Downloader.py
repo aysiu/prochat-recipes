@@ -166,11 +166,6 @@ class URLHTTP2Downloader(Processor):
         # construct curl command.
         if self.env["HTTP2"]:
 			curl_cmd = [self.env['CURL_PATH'],
-	                    '--silent', '--show-error', '--no-buffer',
-	                    '--dump-header', '-',
-						'--http2',
-	                    '--speed-time', '30',
-	                    '--location',
 	                    '--url', self.env["url"],
 	                    '--output', pathname_temporary]
         else:
