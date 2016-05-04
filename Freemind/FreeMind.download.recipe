@@ -42,7 +42,7 @@ By  default downloads latest version</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>URLHTTP2Downloader</string>
+			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
