@@ -164,7 +164,7 @@ class URLHTTP2Downloader(Processor):
         os.chmod(pathname_temporary, 0644)
 
         # construct curl command.
-		if self.env["HTTP2"]:
+        if self.env["HTTP2"]:
 			curl_cmd = [self.env['CURL_PATH'],
 	                    '--silent', '--show-error', '--no-buffer',
 	                    '--dump-header', '-',
