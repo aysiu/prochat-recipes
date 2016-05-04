@@ -14,7 +14,7 @@
 	   	<key>DOWNLOAD_URL</key>
 	   	<string>http://www.vernier.com/support/updates/logger-pro/</string>
 	    <key>SEARCH_PATTERN_URL</key>
-		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
+		<string>href="(?P&lt;url&gt;.*\.dmg)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
 		<string>http://www2.vernier.com/updates/LoggerPro(?P&lt;url2&gt;[\_0-9]*).*</string>
 		<key>USER_AGENT</key>
