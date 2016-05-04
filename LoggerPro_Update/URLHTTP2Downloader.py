@@ -44,8 +44,8 @@ def getxattr(pathname, attr):
         return None
 
 
-class URLDownloader(Processor):
-    """Downloads a URL to the specified download_dir using curl."""
+class URLHTTP2Downloader(Processor):
+    """Downloads a URL to the specified download_dir using curl and possibly HTTP2."""
     description = __doc__
     input_variables = {
         "url": {
@@ -92,10 +92,10 @@ class URLDownloader(Processor):
             "default": "/usr/bin/curl",
             "description": "Path to curl binary. Defaults to /usr/bin/curl.",
         },
-       "HTTP2": {
+        "HTTP2": {
             "required": False,
             "default": True,
-            "description": "If has to use HTTP2 instead of preferred HTTP1.1 (may require some installation of libcurl)",
+            "description": "If has to use HTTP2 instead of preferred HTTP1.1, may require some installation of libcurl",
         },
     }
     output_variables = {
