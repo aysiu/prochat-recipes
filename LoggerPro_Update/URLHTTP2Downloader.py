@@ -173,7 +173,7 @@ class URLHTTP2Downloader(Processor):
 	                    '--location',
 	                    '--url', self.env["url"],
 	                    '--output', pathname_temporary]
-		else:
+        else:
 	        curl_cmd = [self.env['CURL_PATH'],
 	                    '--silent', '--show-error', '--no-buffer',
 	                    '--dump-header', '-',
