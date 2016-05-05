@@ -33,6 +33,8 @@
             <string>vernier.com</string>
             <key>category</key>
             <string>Science</string>
+			<key>version</key>
+			<string>%version%</string>
         </dict>
     </dict>
     <key>ParentRecipe</key>
