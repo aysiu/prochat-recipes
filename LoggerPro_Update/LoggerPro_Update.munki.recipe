@@ -33,8 +33,6 @@
             <string>vernier.com</string>
             <key>category</key>
             <string>Science</string>
-			<key>version</key>
-			<string>1.1</string>
         </dict>
     </dict>
     <key>ParentRecipe</key>
@@ -42,15 +40,26 @@
     <key>Process</key>
     <array>
     <dict>
-         <key>Arguments</key>
-         <dict>
+    	<key>Processor</key>
+    	<string>MunkiInfoCreator</string>
+        <key>Arguments</key>
+        <dict>
+             <key>pkg_path</key>
+             <string>%pkg_path%</string>
+             <key>version</key>
+             <string>%dversion%</string>
+        </dict>
+     </dict>
+    <dict>
+    	<key>Processor</key>
+    	<string>MunkiImporter</string>
+        <key>Arguments</key>
+        <dict>
              <key>pkg_path</key>
              <string>%pkg_path%</string>
              <key>repo_subdirectory</key>
              <string>%MUNKI_REPO_SUBDIR%</string>
-         </dict>
-         <key>Processor</key>
-         <string>MunkiImporter</string>
+        </dict>
      </dict>
 	</array>
 </dict>
