@@ -34,7 +34,7 @@
             <key>category</key>
             <string>Science</string>
 			<key>version</key>
-			<string>%dversion%</string>
+			<string>1.1</string>
         </dict>
     </dict>
     <key>ParentRecipe</key>
