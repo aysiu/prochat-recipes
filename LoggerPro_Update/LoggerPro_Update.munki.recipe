@@ -30,7 +30,7 @@
              <key>repo_subdirectory</key>
              <string>%MUNKI_REPO_SUBDIR%</string>
 			 <key>version_comparison_key</key>
-			 <string>%dversion%</string>
+			 <string>version</string>
 			 <key>pkginfo</key>
 			 <dict>
 				<key>version</key>
