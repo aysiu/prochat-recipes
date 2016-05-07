@@ -29,6 +29,11 @@
              <string>%NAME%.pkg</string>
              <key>repo_subdirectory</key>
              <string>%MUNKI_REPO_SUBDIR%</string>
+			 <key>pkginfo</key>
+			 <dict>
+				<key>version</key>
+				<string>%dversion%</string>
+			 </dict>
         </dict>
      </dict>
 	</array>

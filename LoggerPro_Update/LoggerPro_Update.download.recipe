@@ -16,7 +16,7 @@
 	    <key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.dmg)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
-		<string>http://www2.vernier.com/updates/LoggerPro(?P&lt;url2&gt;[\_0-9]*).*</string>
+		<string>http://www2.vernier.com/updates/LoggerPro(?P&lt;url2&gt;[\_0-9]*)_.*</string>
 		<key>USER_AGENT</key>
         <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 	</dict>
