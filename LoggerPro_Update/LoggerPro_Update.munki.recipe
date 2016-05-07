@@ -22,17 +22,6 @@
     <array>
     <dict>
     	<key>Processor</key>
-    	<string>MunkiInfoCreator</string>
-        <key>Arguments</key>
-        <dict>
-             <key>pkg_path</key>
-             <string>%NAME%.pkg</string>
-             <key>version</key>
-             <string>1.1</string>
-        </dict>
-     </dict>
-    <dict>
-    	<key>Processor</key>
     	<string>MunkiImporter</string>
         <key>Arguments</key>
         <dict>
