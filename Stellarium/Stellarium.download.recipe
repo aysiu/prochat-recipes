@@ -9,72 +9,70 @@ By  default downloads latest version</string>
 	<string>com.github.prochat.download.stellarium</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/s/st/stellarium/</string>
+		<key>INDEX_URL</key>
+		<string>https://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/</string>
 		<key>NAME</key>
 		<string>Stellarium</string>
-       	<key>INDEX_URL</key>
-       	<string>https://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/</string>
-		<key>DOWNLOAD_URL</key>
-       	<string>https://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/s/st/stellarium/</string>
-
-       	<key>SEARCH_PATTERN_URL</key>
-		<string>title="(?P&lt;url&gt;.*\.dmg):.*"</string>	
+		<key>SEARCH_PATTERN_URL</key>
+		<string>title="(?P&lt;url&gt;.*\.dmg):.*"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
-		<string>title="/Stellarium-MacOSX/(?P&lt;url2&gt;[\.0-9]*)/.*\.dmg.*"</string>		
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>		
+		<string>title="/Stellarium-MacOSX/(?P&lt;url2&gt;[\.0-9]*)/.*\.dmg.*"</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 	</dict>
 	<key>Process</key>
 	<array>
-	 	<dict>
-			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%INDEX_URL%</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_URL%</string>
-		               	<key>request_headers</key>
-		                <dict>
-		                        <key>user-agent</key>
-		                        <string>%USER_AGENT%</string>
-		                </dict>
-            		</dict>
-		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_URL%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%%match%</string>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-               	<key>request_headers</key>
-                <dict>
-                        <key>user-agent</key>
-                        <string>%USER_AGENT%</string>
-                </dict>
-				
+				<string>%INDEX_URL%</string>
 			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%%match%</string>
+			</dict>
 			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%INDEX_URL%</string>
-						<key>result_output_var_name</key>
-						<string>dversion</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_VERSION%</string>
-		               	<key>request_headers</key>
-		                <dict>
-		                        <key>user-agent</key>
-		                        <string>%USER_AGENT%</string>
-		                </dict>
-            		</dict>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_VERSION%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+				<key>result_output_var_name</key>
+				<string>dversion</string>
+				<key>url</key>
+				<string>%INDEX_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

@@ -2,31 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Download LoggerPro Update disk image and build a package.</string>
-    <key>Identifier</key>
-    <string>com.github.prochat.pkg.loggerpro_update</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>LoggerPro_Update</string>
-    </dict>
-    <key>ParentRecipe</key>
-    <string>com.github.prochat.download.loggerpro_update</string>
-    <key>Process</key>
-    <array>
-    <dict>
-        <key>Processor</key>
-        <string>PkgCopier</string>
-        <key>Arguments</key>
-        <dict>
-            <key>source_pkg</key>
-            <string>%pathname%/Update*</string>
-            <key>pkg_path</key>
-            <string>%NAME%.pkg</string>
-        </dict>
-    </dict>
+	<key>Description</key>
+	<string>Download LoggerPro Update disk image and build a package.</string>
+	<key>Identifier</key>
+	<string>com.github.prochat.pkg.loggerpro_update</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>LoggerPro_Update</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.prochat.download.loggerpro_update</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%NAME%.pkg</string>
+				<key>source_pkg</key>
+				<string>%pathname%/Update*</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+		</dict>
 	</array>
 </dict>
 </plist>
-

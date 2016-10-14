@@ -2,82 +2,79 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Download Aseba disk image and build a package.</string>
-    <key>Identifier</key>
-    <string>com.github.prochat.pkg.aseba</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Aseba</string>
-        <key>BUNDLEID</key>
-        <string>org.thymio.aseba</string>
-    </dict>
-    <key>ParentRecipe</key>
-    <string>com.github.prochat.download.aseba</string>
-    <key>Process</key>
-    <array>
-    <dict>
-        <key>Comment</key>
-        <string>Create the package root</string>
-        <key>Processor</key>
-        <string>PkgRootCreator</string>
-        <key>Arguments</key>
-        <dict>
-            <key>pkgroot</key>
-            <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-            <key>pkgdirs</key>
-            <dict>
-                <key>Applications</key>
-                <string>0775</string>
-            </dict>
-        </dict>
-    </dict>
+	<key>Description</key>
+	<string>Download Aseba disk image and build a package.</string>
+	<key>Identifier</key>
+	<string>com.github.prochat.pkg.aseba</string>
+	<key>Input</key>
 	<dict>
-		<key>Comment</key>
-     	<string>Copy files from source to root</string>
-        <key>Processor</key>
-        <string>PkgCopier</string>
-        <key>Arguments</key>
-        <dict>
-	    	<key>source_pkg</key>
-	        <string>%pathname%/Aseba</string>
-			<key>pkg_path</key>
-			<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Aseba</string>
-	    </dict>
- 	</dict>
-
-    <dict>
-        <key>Processor</key>
-        <string>PkgCreator</string>
-        <key>Arguments</key>
-        <dict>
-            <key>pkg_request</key>
-            <dict>
-                <key>pkgname</key>
-                <string>%NAME%-%version%</string>
-                <key>version</key>
-                <string>%version%</string>
-                <key>id</key>
-                <string>%BUNDLEID%</string>
-                <key>options</key>
-                <string>purge_ds_store</string>
-                <key>chown</key>
-                <array>
-                    <dict>
-                        <key>path</key>
-                        <string>Applications</string>
-                        <key>user</key>
-                        <string>root</string>
-                        <key>group</key>
-                        <string>admin</string>
-                    </dict>
-                </array>
-            </dict>
-        </dict>
-    </dict>
-
+		<key>BUNDLEID</key>
+		<string>org.thymio.aseba</string>
+		<key>NAME</key>
+		<string>Aseba</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.prochat.download.aseba</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Comment</key>
+			<string>Create the package root</string>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Aseba</string>
+				<key>source_pkg</key>
+				<string>%pathname%/Aseba</string>
+			</dict>
+			<key>Comment</key>
+			<string>Copy files from source to root</string>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>id</key>
+					<string>%BUNDLEID%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
 	</array>
 </dict>
 </plist>
-

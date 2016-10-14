@@ -8,52 +8,52 @@
 	<string>com.github.prochat.download.aseba</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.thymio.org/fr:macinstall</string>
 		<key>NAME</key>
 		<string>Aseba</string>
-	   	<key>DOWNLOAD_URL</key>
-	   	<string>https://www.thymio.org/fr:macinstall</string>
-	    <key>SEARCH_PATTERN_URL</key>
+		<key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.dmg.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
 		<string>Version (?P&lt;url2&gt;[\.0-9]*).*</string>
 	</dict>
-	<key>Process</key>	
-	<array>	
-	 	<dict>
-			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%DOWNLOAD_URL%</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_URL%</string>
-            		</dict>
-		</dict>	
+	<key>Process</key>
+	<array>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_URL%</string>
 				<key>url</key>
-				<string>%match%</string>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%DOWNLOAD_URL%</string>
 			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>%match%</string>
+			</dict>
 			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%DOWNLOAD_URL%</string>
-						<key>result_output_var_name</key>
-						<string>version</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_VERSION%</string>
-            		</dict>
-		</dict>		
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_VERSION%</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
 	</array>
 </dict>
-</plist>	
+</plist>
