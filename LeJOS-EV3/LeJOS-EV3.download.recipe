@@ -12,7 +12,7 @@ By default downloads latest version</string>
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
        	<key>DOWNLOAD_URL</key>
-       	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
+       	<string>https://sourceforge.net/projects/ev3.lejos.p/files/</string>
        	<key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
@@ -37,7 +37,7 @@ By default downloads latest version</string>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://sourceforge.net%match%</string>
+				<string>https://sourceforge.net%match%</string>
 				<key>filename</key>
 				<string>%NAME%.tar.gz</string>
 			</dict>
