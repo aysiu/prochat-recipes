@@ -12,9 +12,9 @@ By  default downloads latest version</string>
 		<key>NAME</key>
 		<string>Stellarium</string>
        	<key>INDEX_URL</key>
-       	<string>http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/</string>
+       	<string>https://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/</string>
 		<key>DOWNLOAD_URL</key>
-       	<string>http://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/s/st/stellarium/</string>
+       	<string>https://www.mirrorservice.org/sites/ftp.sourceforge.net/pub/sourceforge/s/st/stellarium/</string>
 
        	<key>SEARCH_PATTERN_URL</key>
 		<string>title="(?P&lt;url&gt;.*\.dmg):.*"</string>	
