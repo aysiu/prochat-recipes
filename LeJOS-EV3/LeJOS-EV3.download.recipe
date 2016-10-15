@@ -9,51 +9,51 @@ By default downloads latest version</string>
 	<string>com.github.prochat.download.LeJOS-EV3</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://sourceforge.net/projects/ev3.lejos.p/files/</string>
 		<key>NAME</key>
 		<string>LeJOS-EV3</string>
-       	<key>DOWNLOAD_URL</key>
-       	<string>http://sourceforge.net/projects/ev3.lejos.p/files/</string>
-       	<key>SEARCH_PATTERN_URL</key>
+		<key>SEARCH_PATTERN_URL</key>
 		<string>href="(?P&lt;url&gt;.*\.tar\.gz.*)"</string>
 		<key>SEARCH_PATTERN_VERSION</key>
 		<string>href=".*title="/(?P&lt;url2&gt;[\.0-9]*).*/.*\.tar\.gz.*"</string>
 	</dict>
 	<key>Process</key>
 	<array>
-	 	<dict>
-			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%DOWNLOAD_URL%</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_URL%</string>
-            		</dict>
-		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_URL%</string>
 				<key>url</key>
-				<string>http://sourceforge.net%match%</string>
-				<key>filename</key>
-				<string>%NAME%.tar.gz</string>
+				<string>%DOWNLOAD_URL%</string>
 			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.tar.gz</string>
+				<key>url</key>
+				<string>https://sourceforge.net%match%</string>
+			</dict>
 			<key>Processor</key>
-           		<string>URLTextSearcher</string>
-           		<key>Arguments</key>
-            		<dict>
-                		<key>url</key>
-                		<string>%DOWNLOAD_URL%</string>
-						<key>result_output_var_name</key>
-						<string>version</string>
-                		<key>re_pattern</key>
-                		<string>%SEARCH_PATTERN_VERSION%</string>
-            		</dict>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_VERSION%</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

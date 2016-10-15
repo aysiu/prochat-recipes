@@ -2,35 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest LeJOS-NXJ and imports into Munki.
+	<key>Description</key>
+	<string>Downloads the latest LeJOS-NXJ and imports into Munki.
 	</string>
 	<key>Identifier</key>
 	<string>com.github.prochat.munki.LeJOS-NXJ</string>
 	<key>Input</key>
-    <dict>
-	    <key>NAME</key>
-        <string>LeJOS-NXJ</string>
-        <key>MUNKI_CATEGORY</key>
-        <string>Developer Tools</string>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/LeJOS-NXJ</string>
-    </dict>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Developer Tools</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/LeJOS-NXJ</string>
+		<key>NAME</key>
+		<string>LeJOS-NXJ</string>
+	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.pkg.LeJOS-NXJ</string>
-   	<key>Process</key>
-    <array>	
-	  	<dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
 			<key>Processor</key>
-	      	<string>MunkiImporter</string>
-	      	<key>Arguments</key>
-	      	<dict>
-	          	<key>pkg_path</key>
-	          	<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-	          	<key>repo_subdirectory</key>
-	          	<string>%MUNKI_REPO_SUBDIR%</string>
-	      	</dict>
-	      
+			<string>MunkiImporter</string>
 		</dict>
 	</array>
 </dict>

@@ -7,93 +7,91 @@
 	<key>Identifier</key>
 	<string>com.github.prochat.pkg.LeJOS-EV3</string>
 	<key>Input</key>
-    <dict>
-		<key>NAME</key>
-		<string>LeJOS-EV3</string>
+	<dict>
 		<key>BUNDLEID</key>
 		<string>org.lejos.ev3</string>
-    </dict>
+		<key>NAME</key>
+		<string>LeJOS-EV3</string>
+	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prochat.download.LeJOS-EV3</string>
 	<key>Process</key>
-    <array>
-	<dict>
-	 	<key>Comment</key>
-	    <string>Unarchive downloaded stuff</string>
-	    <key>Processor</key>
-	    <string>Unarchiver</string>
-	    <key>Arguments</key>
-	    <dict>
-		<key>archive_path</key>
-		<string>%pathname%</string>
-		<key>destination_path</key>
-		<string>%RECIPE_CACHE_DIR%/app/</string>
-		<key>purge_destination</key>
-		<true/>
-	    </dict>
-	</dict>
-	<dict>
-	 	<key>Comment</key>
-	    <string>Create the package root</string>
-	    <key>Processor</key>
-	    <string>PkgRootCreator</string>
-	    <key>Arguments</key>
-	    <dict>
-		<key>pkgroot</key>
-		<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-		<key>pkgdirs</key>
+	<array>
 		<dict>
-		    <key>Applications</key>
-		    <string>0775</string>
-		</dict>
-	    </dict>
-	</dict>
-	<dict>
-	 	<key>Comment</key>
-	    <string>Copy files from source to root</string>
-	    <key>Processor</key>
-	    <string>Copier</string>
-	    <key>Arguments</key>
-	    <dict>
-			<key>source_path</key>
-			<string>%destination_path%</string>
-			<key>destination_path</key>
-			<string>%pkgroot%/Applications/%NAME%</string>
-	    </dict>
-	</dict>
-	
-	<dict>
-	    <key>Processor</key>
-	    <string>PkgCreator</string>
-	    <key>Arguments</key>
-	    <dict>
-		<key>pkg_request</key>
-		<dict>
-		    <key>pkgname</key>
-		    <string>%NAME%-%version%</string>
-		    <key>version</key>
-		    <string>%version%</string>
-		    <key>id</key>
-		    <string>%BUNDLEID%</string>
-		    <key>options</key>
-		    <string>purge_ds_store</string>
-			<key>scripts</key>
-			<string>LeJOS-EV3_Scripts</string>
-		    <key>chown</key>
-		    <array>
+			<key>Arguments</key>
 			<dict>
-			    <key>path</key>
-			    <string>Applications</string>
-			    <key>user</key>
-			    <string>root</string>
-			    <key>group</key>
-			    <string>admin</string>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/app/</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
-		    </array>
+			<key>Comment</key>
+			<string>Unarchive downloaded stuff</string>
+			<key>Processor</key>
+			<string>Unarchiver</string>
 		</dict>
-	    </dict>
-	</dict>
-	
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Comment</key>
+			<string>Create the package root</string>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/Applications/%NAME%</string>
+				<key>source_path</key>
+				<string>%destination_path%</string>
+			</dict>
+			<key>Comment</key>
+			<string>Copy files from source to root</string>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>id</key>
+					<string>%BUNDLEID%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>scripts</key>
+					<string>LeJOS-EV3_Scripts</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
 	</array>
 </dict>
 </plist>
