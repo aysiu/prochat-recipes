@@ -29,6 +29,29 @@
 				<dict>
 					<key>version</key>
 					<string>%dversion%</string>
+					<key>update_for</key>
+					<array>
+						<string>LoggerPro</string>
+					</array>
+					<key>installs</key>
+					<array>
+						<dict>
+							<key>CFBundleIdentifier</key>
+							<string>com.vernier.loggerpro</string>
+							<key>CFBundleName</key>
+							<string>Logger Pro</string>
+							<key>CFBundleShortVersionString</key>
+							<string>%dversion%</string>
+							<key>CFBundleVersion</key>
+							<string>%dversion%</string>
+							<key>path</key>
+							<string>/Applications/Logger Pro 3/Logger Pro.app</string>
+							<key>type</key>
+							<string>application</string>
+							<key>version_comparison_key</key>
+							<string>CFBundleShortVersionString</string>
+						</dict>
+					</array>
 				</dict>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
